@@ -19,9 +19,9 @@ if(fp == NULL)
 
 while(fgets(line,MAX_LINE_LENGTH,fp) != NULL)
 {
-	opcode = strtok(line, " \n");
+	opcode = strtok(line, " \n\t\r");
 	if(strcmp(opcode, "push") == 0){
-		arg = strtok(NULL , " \n");
+		arg = strtok(NULL , " \n\t\r");
 		value = atoi(arg);
 		push(&stack , value);
 	}else if (strcmp(opcode , "pall") == 0)
