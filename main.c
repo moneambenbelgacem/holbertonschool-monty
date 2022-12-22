@@ -41,12 +41,11 @@ int main(__attribute__((unused)) int argc, char *argv[])
 				{
 					fprintf(stderr, "L%d: usage: push integer\n", line_number);
 
-					continue;
-				}
+					
 				value = atoi(arg);
 				if (value != 0)
 				{
-						fprintf(stderr, "L%d: usage: push integer\n", line_number);
+						fprintf(stderr, "L%d: unknown instruction pushe\n",line_number);
 
 					continue;
 				}
