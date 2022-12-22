@@ -23,7 +23,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	while (fgets(line, MAX_LINE_LENGTH, fp) != NULL)
+	while ((fgets(line, MAX_LINE_LENGTH, fp) != NULL)&& line_number++)
 	{
 		if (strlen(line) == 1)
 		{
@@ -45,7 +45,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 				value = atoi(arg);
 				if (value != 0)
 				{
-					line_number++;
+					
 						fprintf(stderr, "L%d: unknown instruction pushe\n",line_number);
 
 					return(1);
