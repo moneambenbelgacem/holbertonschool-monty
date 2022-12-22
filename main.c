@@ -19,15 +19,20 @@ if(fp == NULL)
 
 while(fgets(line,MAX_LINE_LENGTH,fp) != NULL)
 {
+	if(strlen(line)== 1)
+	continue;
 	opcode = strtok(line, " \n\t\r");
 	if(strcmp(opcode, "push") == 0){
 		arg = strtok(NULL , " \n\t\r");
+		if(arg == NULL)
+		continue;
 		value = atoi(arg);
 		push(&stack , value);
 	}else if (strcmp(opcode , "pall") == 0)
 	{
 		pall(stack);
 	}else{
+		
 		 fprintf(stderr, "Error: invalid opcode\n");
       exit(EXIT_FAILURE);
 	}
