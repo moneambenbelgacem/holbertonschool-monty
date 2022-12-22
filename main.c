@@ -8,7 +8,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 	FILE *fp;
 	char line[MAX_LINE_LENGTH];
 	char *opcode, *arg;
-	int value, line_number = 1;
+	int value = 0, line_number = 1;
 
 	filename = argv[1];
 	fp = fopen(filename, "r");
@@ -43,13 +43,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 
 				}
 				value = atoi(arg);
-				if (value != 0)
-				{
-					
-						fprintf(stderr, "L%d: unknown instruction pushe\n",line_number);
-
-					return(1);
-				}
+			
 				push(&stack, value);
 			}
 			else if (strcmp(opcode, "pall") == 0)
@@ -59,7 +53,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 			else
 			{
 
-				fprintf(stderr, "L%d: unknown instruction pushe\n",line_number);
+				fprintf(stderr, "L%d: unknown instruction pushe***\n",line_number);
 				exit(EXIT_FAILURE);
 			}
 		}
