@@ -17,6 +17,11 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n",filename);
 		exit(EXIT_FAILURE);
 	}
+	else if( argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
 
 	while (fgets(line, MAX_LINE_LENGTH, fp) != NULL)
 	{
