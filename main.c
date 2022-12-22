@@ -41,7 +41,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 				{
 					fprintf(stderr, "L%d: usage: push integer\n", line_number);
 
-					
+				}
 				value = atoi(arg);
 				if (value != 0)
 				{
