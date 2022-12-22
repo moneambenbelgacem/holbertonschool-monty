@@ -14,7 +14,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 	fp = fopen(filename, "r");
 	if (fp == NULL)
 	{
-		fprintf(stderr, "USAGE: monty file\n");
+		fprintf(stderr, "Error: Can't open file %s\n",filename);
 		exit(EXIT_FAILURE);
 	}
 
