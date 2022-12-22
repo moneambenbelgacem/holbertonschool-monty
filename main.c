@@ -8,7 +8,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 	FILE *fp;
 	char line[MAX_LINE_LENGTH];
 	char *opcode, *arg;
-	int value, line_number = 1;
+	int value, line_number = 1, endvalue = 0;
 
 	filename = argv[1];
 	fp = fopen(filename, "r");
@@ -17,7 +17,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		if (argc != 2)
 		{
 			fprintf(stderr, "USAGE: monty file\n");
-			return(1);
+			endvalue = 1;
 		}
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
@@ -60,5 +60,8 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		line_number++;
 	}
 	fclose(fp);
-	return (EXIT_SUCCESS);
+	if (endvalue == 0)
+		return (0);
+	else
+		return (1);
 }
