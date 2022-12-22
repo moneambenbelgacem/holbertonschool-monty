@@ -44,6 +44,12 @@ int main(__attribute__((unused)) int argc, char *argv[])
 					continue;
 				}
 				value = atoi(arg);
+				if (value != 0)
+				{
+						fprintf(stderr, "L%d: usage: push integer\n", line_number);
+
+					continue;
+				}
 				push(&stack, value);
 			}
 			else if (strcmp(opcode, "pall") == 0)
