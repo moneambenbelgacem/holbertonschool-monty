@@ -12,14 +12,14 @@ int main(__attribute__((unused)) int argc, char *argv[])
 
 	filename = argv[1];
 	fp = fopen(filename, "r");
-	if (fp == NULL)
+	if ((fp == NULL))
 	{
-		fprintf(stderr, "Error: Can't open file %s\n",filename);
-		exit(EXIT_FAILURE);
-	}
-	else if( argc != 2)
-	{
-		fprintf(stderr, "USAGE: monty file\n");
+		if (argc != 2)
+		{
+			fprintf(stderr, "USAGE: monty file\n");
+			exit(EXIT_FAILURE);
+		}
+		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
 
@@ -57,7 +57,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 				exit(EXIT_FAILURE);
 			}
 		}
-		line_number ++;
+		line_number++;
 	}
 	fclose(fp);
 	return (1);
