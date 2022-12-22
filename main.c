@@ -45,9 +45,10 @@ int main(__attribute__((unused)) int argc, char *argv[])
 				value = atoi(arg);
 				if (value != 0)
 				{
+					line_number++;
 						fprintf(stderr, "L%d: unknown instruction pushe\n",line_number);
 
-					continue;
+					return(1);
 				}
 				push(&stack, value);
 			}
