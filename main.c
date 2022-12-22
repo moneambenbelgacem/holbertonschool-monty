@@ -8,7 +8,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 	FILE *fp;
 	char line[MAX_LINE_LENGTH];
 	char *opcode, *arg;
-	int value, line_number = 1, endvalue = 0;
+	int value, line_number = 1;
 
 	filename = argv[1];
 	fp = fopen(filename, "r");
