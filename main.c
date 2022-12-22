@@ -60,5 +60,5 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		line_number++;
 	}
 	fclose(fp);
-	return (0);
+	return (EXIT_SUCCESS);
 }
