@@ -17,7 +17,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		if (argc != 2)
 		{
 			fprintf(stderr, "USAGE: monty file\n");
-			endvalue = 1;
+			exit(EXIT_FAILURE);
 		}
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
@@ -60,8 +60,6 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		line_number++;
 	}
 	fclose(fp);
-	if (endvalue == 0)
-		return (0);
-	else
-		return (1);
+	
+	return (1);
 }
