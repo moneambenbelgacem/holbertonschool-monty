@@ -1,9 +1,21 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 #define MAX_LINE_LENGTH 100
+#define STACK 0
+#define QUEUE 1
+
+typedef struct gvar
+{
+	int queue; 
+	size_t stack_len
+}var_t
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -34,8 +46,11 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void pall(stack_t *stack) ;
-void push(stack_t **stack, int value);
+void push(stack_t **stack, int n);
+void pall(stack_t **stack, unsigned int line_number);
+void free_lineptr(int status, void *arg);
+void free_stack(int status, void *arg);
+void m_fs_close(int status, void *arg);
 
 
 

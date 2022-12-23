@@ -53,7 +53,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 			else
 			{
 
-				fprintf(stderr, "L%d: unknown instruction pushe***\n",line_number);
+				fprintf(stderr, "L%d: unknown instruction pushe\n",line_number);
 				exit(EXIT_FAILURE);
 			}
 		}
