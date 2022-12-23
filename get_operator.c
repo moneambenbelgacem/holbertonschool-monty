@@ -8,7 +8,7 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 		};
 		for( i = 0; valid_ops[i].opcode != NULL; i++)
 		{
-			if(strcpm(valid_ops[i].opcode,op)== 0)
+			if (strcmp(valid_ops[i].opcode, op) == 0)
 			{
 				valid_ops[i].f(stack, line_number);
 			return;

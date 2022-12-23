@@ -1,6 +1,5 @@
 #include "monty.h"
-
-var_t varglob;
+ extern var_t varglob;
 
 int main( int argc, char *argv[])
 {
