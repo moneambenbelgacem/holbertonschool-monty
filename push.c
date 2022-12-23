@@ -1,6 +1,5 @@
 #include "monty.h"
 #include <ctype.h>
- extern var_t varglob;
 
 /**
  * check_for_digit - checks that a string only contains digits
@@ -29,7 +28,7 @@ static int check_for_digit(char *arg)
  *
  * Return: void
  */
-void push(stack_t **stack, unsigned int line_number)
+void m_push(stack_t **stack, unsigned int line_number)
 {
 	char *arg;
 	int n;
@@ -48,5 +47,5 @@ void push(stack_t **stack, unsigned int line_number)
 		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	varglob.stack_len++;
+	var.stack_len++;
 }

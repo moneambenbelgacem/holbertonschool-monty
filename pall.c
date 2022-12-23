@@ -7,7 +7,7 @@
  *
  * Return: void
  */
-void pall(stack_t **stack, unsigned int line_number)
+void m_pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head;
 
