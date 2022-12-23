@@ -10,8 +10,6 @@
  *
  * Return: pointer to the new node, or NULL on failure
  */
- var_t varglob;
-
 stack_t *add_node(stack_t **stack, const int n)
 {
 	stack_t *new;
@@ -34,7 +32,7 @@ stack_t *add_node(stack_t **stack, const int n)
 		(*stack)->prev = new;
 		new->next = *stack;
 	}
-	if (varglob.queue == STACK || varglob.stack_len == 0)
+	if (var.queue == STACK || var.stack_len == 0)
 		*stack = new;
 	return (new);
 }

@@ -13,6 +13,6 @@ void m_fs_close(int status, void *arg)
 
 	(void)status;
 
-	fs = (FILE *) arg;
+	fs = (FILE *)arg;
 	fclose(fs);
 }

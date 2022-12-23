@@ -7,8 +7,6 @@
  *
  * Return: void
  */
- extern var_t varglob;
-
 void free_stack(int status, void *arg)
 {
 	stack_t **stack;
@@ -28,5 +26,5 @@ void free_stack(int status, void *arg)
 		free(*stack);
 		*stack = next;
 	}
-	varglob.stack_len = 0;
+	var.stack_len = 0;
 }
