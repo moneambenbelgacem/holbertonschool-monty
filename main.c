@@ -30,5 +30,14 @@ int main( int argc, char *argv[])
 	on_exit(free_lineptr, &lineptr);
 	on_exit(free_stack, &stack);
 	on_exit(m_fs_close, fp);
-	return (0);
+	while (getline(&lineptr,&n,fp) != -1)
+	{
+		line_count++;
+		op = strtok(lineptr,"\n\t\r ");
+	}
+	if (op != NULL && op[0] != '#')
+		{
+			get_op(op, &stack, line_number);
+		}
+	exit (EXIT_SUCCESS);
 }
