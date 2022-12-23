@@ -37,7 +37,7 @@ int main( int argc, char *argv[])
 	}
 	if (op != NULL && op[0] != '#')
 		{
-			get_op(op, &stack, line_number);
+			get_op(op, &stack, line_count);
 		}
 	exit (EXIT_SUCCESS);
 }
