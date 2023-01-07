@@ -2,7 +2,7 @@
 
 /**
  * m_pop - pop top element off of `stack'
- * @stack: double pointer to head of stack
+ * @stack: double po    inter to head of stack
  * @line_number: line number of current operation
  *
  * Return: void
