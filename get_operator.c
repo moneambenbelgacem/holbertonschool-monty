@@ -27,7 +27,7 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 	}
 
 	fprintf(stderr,
-			"L%u: can't pint, stack empty %s\n",
+			"L%u: unknown instruction %s\n",
 			line_number, op);
 	exit(EXIT_FAILURE);
 }

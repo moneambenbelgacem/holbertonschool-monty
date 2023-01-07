@@ -23,7 +23,7 @@ static int check_for_digit(char *arg)
 
 /**
  * m_push - push an integer onto the stack
- * @stack: double pointer to the beginning of the stack
+ * @stack: double pointer to the beginning  of the stack
  * @line_number: script line number
  *
  * Return: void
